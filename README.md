@@ -98,6 +98,7 @@ Use **Discover** to browse and search documents.
 
 ## Future Work
 - Visualizations and dashboards
+- Adding a Makefile for crade to grave process
 - Stable Document IDs
 - Chunking and normalization
 - Vector embeddings
