@@ -87,6 +87,122 @@ curl "http://localhost:9200/arxiv/_count?pretty"
 
 ```
 
+## Data Structure
+
+```json
+{
+  "id": "http://arxiv.org/abs/2512.16795v1",
+  "guidislink": true,
+  "link": "https://arxiv.org/abs/2512.16795v1",
+  "title": "From Facts to Conclusions : Integrating Deductive Reasoning in Retrieval-Augmented LLMs",
+  "title_detail": {
+    "type": "text/plain",
+    "language": null,
+    "base": "",
+    "value": "From Facts to Conclusions : Integrating Deductive Reasoning in Retrieval-Augmented LLMs"
+  },
+  "updated": "2025-12-18T17:27:51Z",
+  "updated_parsed": [
+    2025,
+    12,
+    18,
+    17,
+    27,
+    51,
+    3,
+    352,
+    0
+  ],
+  "links": [
+    {
+      "href": "https://arxiv.org/abs/2512.16795v1",
+      "rel": "alternate",
+      "type": "text/html"
+    },
+    {
+      "href": "https://arxiv.org/pdf/2512.16795v1",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "pdf"
+    }
+  ],
+  "summary": "Retrieval-Augmented Generation (RAG) grounds large language models (LLMs) in external evidence, but fails when retrieved sources conflict or contain outdated or subjective information. Prior work address these issues independently but lack unified reasoning supervision. We propose a reasoning-trace-augmented RAG framework that adds structured, interpretable reasoning across three stages : (1) document-level adjudication, (2) conflict analysis, and (3) grounded synthesis, producing citation-linked answers or justified refusals. A Conflict-Aware Trust-Score (CATS) pipeline is introduced which evaluates groundedness, factual correctness, refusal accuracy, and conflict-behavior alignment using an LLM-as-a-Judge. Our 539-query reasoning dataset and evaluation pipeline establish a foundation for conflict-aware, interpretable RAG systems. Experimental results demonstrate substantial gains over baselines, most notably with Qwen, where Supervised Fine-Tuning improved End-to-End answer correctness from 0.069 to 0.883 and behavioral adherence from 0.074 to 0.722.",
+  "summary_detail": {
+    "type": "text/plain",
+    "language": null,
+    "base": "",
+    "value": "Retrieval-Augmented Generation (RAG) grounds large language models (LLMs) in external evidence, but fails when retrieved sources conflict or contain outdated or subjective information. Prior work address these issues independently but lack unified reasoning supervision. We propose a reasoning-trace-augmented RAG framework that adds structured, interpretable reasoning across three stages : (1) document-level adjudication, (2) conflict analysis, and (3) grounded synthesis, producing citation-linked answers or justified refusals. A Conflict-Aware Trust-Score (CATS) pipeline is introduced which evaluates groundedness, factual correctness, refusal accuracy, and conflict-behavior alignment using an LLM-as-a-Judge. Our 539-query reasoning dataset and evaluation pipeline establish a foundation for conflict-aware, interpretable RAG systems. Experimental results demonstrate substantial gains over baselines, most notably with Qwen, where Supervised Fine-Tuning improved End-to-End answer correctness from 0.069 to 0.883 and behavioral adherence from 0.074 to 0.722."
+  },
+  "tags": [
+    {
+      "term": "cs.CL",
+      "scheme": "http://arxiv.org/schemas/atom",
+      "label": null
+    },
+    {
+      "term": "cs.AI",
+      "scheme": "http://arxiv.org/schemas/atom",
+      "label": null
+    },
+    {
+      "term": "cs.CY",
+      "scheme": "http://arxiv.org/schemas/atom",
+      "label": null
+    },
+    {
+      "term": "cs.IR",
+      "scheme": "http://arxiv.org/schemas/atom",
+      "label": null
+    }
+  ],
+  "published": "2025-12-18T17:27:51Z",
+  "published_parsed": [
+    2025,
+    12,
+    18,
+    17,
+    27,
+    51,
+    3,
+    352,
+    0
+  ],
+  "arxiv_comment": "Under Review",
+  "arxiv_primary_category": {
+    "term": "cs.CL"
+  },
+  "authors": [
+    {
+      "name": "Shubham Mishra"
+    },
+    {
+      "name": "Samyek Jain"
+    },
+    {
+      "name": "Gorang Mehrishi"
+    },
+    {
+      "name": "Shiv Tiwari"
+    },
+    {
+      "name": "Harsh Sharma"
+    },
+    {
+      "name": "Pratik Narang"
+    },
+    {
+      "name": "Dhruv Kumar"
+    }
+  ],
+  "author_detail": {
+    "name": "Dhruv Kumar"
+  },
+  "author": "Dhruv Kumar"
+}
+
+```
+
+
 ## Exploring the Data
 
 1. Open http://localhost:5601

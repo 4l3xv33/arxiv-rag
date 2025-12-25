@@ -17,10 +17,12 @@ def main():
     }
 
     q = build_query(query)
-    entries = fetch_arxiv_results(q)
+    raw_results = fetch_arxiv_results(q)
+    parsed_results = parse_arxiv_results(raw_results)
+
 
     write_jsonl_and_ndjson(
-        entries=entries,
+        entries=parsed_results,
         jsonl_path="corpus/corpus.jsonl",
         ndjson_path="corpus/arxiv.bulk.ndjson",
         index_name="arxiv",
@@ -69,6 +71,20 @@ def fetch_arxiv_results(cfg: dict) -> list[dict]:
 
     print(f"Fetched {len(all_entries)} total entries.")
     return all_entries
+
+
+def parse_arxiv_results(raw_results) -> list[dict]:
+    parsed_results = []
+    for result in raw_results:
+        parsed_results.append({
+            "id" : result["id"],
+            "title" : result["title"],
+            "summary" : result["summary"],
+            "date_published" : result["published"],
+            "authors" : [auth["name"] for auth in result["authors"]],
+            "pdf_link" : result["links"][-1]["href"]
+        })
+    return parsed_results
 
 
 def write_jsonl_and_ndjson(entries, jsonl_path, ndjson_path, index_name):

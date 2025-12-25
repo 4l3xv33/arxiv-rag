@@ -44,7 +44,7 @@ help:
 	@echo "  make reset      - Delete + recreate index $(INDEX)"
 	@echo "  make ingest     - Bulk ingest NDJSON into $(INDEX)"
 	@echo "  make count      - Show document count for $(INDEX)"
-	@echo "  make all        - up -> index -> fetch -> ingest -> count"
+	@echo "  make all        - up -> reset -> fetch -> ingest -> count"
 	@echo ""
 
 .PHONY: env
